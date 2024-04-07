@@ -18,16 +18,16 @@ Visualization/Performance Analysis: Use matplotlib and hvplot to visualize and b
 ## Hypothesis
 We can take the top 200 songs from the last two years on Spotify to train a machine learning model that will produce a forecast of the most streamed genres. This information will be used to predict the amount of revenue certain songs will generate and how much certain artists will earn. This premise places importance on data analytics as one foundation for music production. 
 
-
 ## How to Run the Project 
 ## 1. Install Packages
-pandas for data manipulation;
-numpy for numerical operations;
-yfinance for fetching assets prices;
-matplotlib , seaborn and hvplot for visualization. 
-sklearn.preprocessing for statistical modeling including classification, regression, clustering and dimensionality reduction
-xgboost for energizing machine learning model performance and computational speed
-Pytorch for machine learning 
+* pandas for data manipulation;
+* numpy for numerical operations;
+* yfinance for fetching assets prices;
+* matplotlib , seaborn and hvplot for visualization. 
+* sklearn.preprocessing for statistical modeling including classification, regression, clustering and dimensionality reduction
+* xgboost for energizing machine learning model performance and computational speed
+* Pytorch for machine learning
+  
 ## 2. Set Up Global Parameters
 In this initial phase, we establish the foundation for our analysis by defining global parameters. These parameters include the date range for our data, the list of genres to analyze alongside its ranking, and any financial metrics of interest (e.g. number of streams, price of each stream). This step is crucial as it ensures that all subsequent analyses operate under a consistent set of assumptions and data scope.
 Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered data that it not have a name for the type of genre the music was or data that was taking data globally (not within our top 10 categories).  
