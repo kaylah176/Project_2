@@ -29,8 +29,8 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 * Pytorch for machine learning
   
 ## 2. Set Up Global Parameters
-In this initial phase, we establish the foundation for our analysis by defining global parameters. These parameters include the date range for our data, the list of genres to analyze alongside its ranking, and any financial metrics of interest (e.g. number of streams, price of each stream). This step is crucial as it ensures that all subsequent analyses operate under a consistent set of assumptions and data scope.
-Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered data that it not have a name for the type of genre the music was or data that was taking data globally (not within our top 10 categories).  
+In this initial phase, we established the foundation for our analysis by defining global parameters. These parameters include the date range for our data, the list of genres to analyze alongside its ranking, and any financial metrics of interest (e.g. number of streams, price of each stream). These steps are crucial as it ensures that all subsequent analyses operate under a consistent set of assumptions and data scope.
+Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 categories).  
 
 spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
 
