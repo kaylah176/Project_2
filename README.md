@@ -37,9 +37,11 @@ spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['countr
 ## 3. Data Exploration
 Feature Preprocessing 
 This section is a thorough examination of the dataset, employing statistical analyses, and visualizations to uncover the relationship with genre and streams.
+
 ## 4.1 
 First off changing the categorical features to numbers by using dummies for our final data output. Doing this will allow us to change categorical features using dummies 
 Final data all numbers 
+
 ## Conclusion
 The last 3 classes has stronger correlation with genre based on factors 
 
