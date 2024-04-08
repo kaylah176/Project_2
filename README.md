@@ -38,9 +38,19 @@ spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['countr
 Feature Preprocessing 
 This section is a thorough examination of the dataset, employing statistical analyses, and visualizations to uncover the relationship with genre and streams.
 
-## 4.1 
-First off changing the categorical features to numbers by using dummies for our final data output. Doing this will allow us to change categorical features using dummies 
-Final data all numbers 
+## Section:4  
+First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
+
+## Section:5 
+In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us the most accurate and precise results.
+
+## Section:6 
+
+## Section:7
+
+## Section:8 
+
+## Section:9 
 
 ## Conclusion
 The last 3 classes has stronger correlation with genre based on factors 
