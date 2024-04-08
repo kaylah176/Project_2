@@ -42,7 +42,9 @@ This section is a thorough examination of the dataset, employing statistical ana
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
 
 ## Section:5 
-In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us the most accurate and precise results.
+In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us accurate and precise results. However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. 
+
+Ask more about the code in this section. -Kim
 
 ## Section:6 
 
