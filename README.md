@@ -35,8 +35,7 @@ Through our filtering we found that some of our categorical features had some un
 spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
 
 ## 3. Data Exploration
-Feature Preprocessing 
-This section is a thorough examination of the dataset, employing statistical analyses, and visualizations to uncover the relationship with genre and streams.
+In our data exploration phase, we concentrated on both numerical and categorical features to investigate potential correlations with streams. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted to narrow down our data scope to four key features: country, region, genre, and language. This refinement will help our dataset, making it more manageable for further analysis in the following section.
 
 ## Section:4  
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
