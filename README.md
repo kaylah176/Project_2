@@ -35,7 +35,7 @@ Through our filtering we found that some of our categorical features had some un
 spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
 
 ## 3. Data Exploration
-In our data exploration phase, we concentrated on both numerical and categorical features to investigate potential correlations with streams. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted to narrow down our data scope to four key features: country, region, artist genre, and language. This refinement will help our dataset, making it more manageable for further analysis in the following section.
+In our data exploration phase, we concentrated on our four key features and streams to investigate potential correlations within our dataset. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted to picking the top ten of our four key features data set: 'country', 'region', 'artist genre', and 'language'. 
 
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
 
@@ -44,7 +44,7 @@ In our data exploration phase, we concentrated on both numerical and categorical
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
 
 ## Section:5 
-In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us accurate and precise results. However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. 
+In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us accurate and precise results. However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. We think the score is not so high 0.55 so we tried to ee if a newr model will be better however the new model does not make it better.  
 
 Ask more about the code in this section. -Kim
 
