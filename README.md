@@ -48,11 +48,50 @@ spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_countr
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
 
 ## Model Training  
-In this section we used Random Forest for undersampling and oversampling. For undersampling we found that this machine learning will help with class weighting and any imbalanced classification. For oversampling we felt that a basic sampling method used to increase the number of the minority class to create a balance between both classes. Hence, why we chose this machine learning because it give us accurate and precise results. 
+In this section we used three machine learning algorithms; `Random Forest`, `XGBooster`, and `PyTorch` for undersampling and oversampling. We decided on these alogrithms to train the resampled dataset from section 4 to help with any imbalanced classifications. 
 
-However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. Even by doin ghtis we found that are score of  0.55 so we tried to ee if a newr model will be better however the new model does not make it better.  
+### Random Forest 
+* Undersample
+```python
+rf_under = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
+clf_under = GridSearchCV(estimator = rf_under, param_grid = param_grid, cv = 5)
+clf_under.fit(X_under_resampled, y_under_resampled)
+```
 
-
+*Oversample
+```python
+rf_over = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
+clf_over = GridSearchCV(estimator = rf_over, param_grid = param_grid, cv = 5)
+clf_over.fit(X_over_resampled, y_over_resampled)
+```
+### XG Booster 
+* Undersample
+```python
+ xgb_clf_under.fit(x_train_xgb, y_train_xgb, eval_set = [(x_valid, y_valid)], verbose = True)
+```
+* Oversample
+```python
+  xgb_clf_over.fit(x_train_xgb, y_train_xgb, eval_set = [(x_valid, y_valid)], verbose = True)
+```
+### PyTorch
+* Undersample
+```python
+X_tensor_under = torch.tensor(X_under_resampled, dtype = torch.float32)  
+y_tensor_under = torch.tensor(y_under_resampled, dtype = torch.long)
+```
+```python
+dataset_under = TensorDataset(X_tensor_under, y_tensor_under)  
+train_loader_under = DataLoader(dataset_under, batch_size = 64, shuffle = True)
+```
+* Oversample
+```python
+X_tensor_over = torch.tensor(X_over_resampled, dtype = torch.float32) 
+y_tensor_over = torch.tensor(y_over_resampled, dtype = torch.long)  
+```
+```python
+dataset_over = TensorDataset(X_tensor_over, y_tensor_over) 
+train_loader_over = DataLoader(dataset_over, batch_size = 64, shuffle = True)
+```
 ## Section:6 
 
 ## Section:7
