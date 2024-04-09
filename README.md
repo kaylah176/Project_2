@@ -94,13 +94,46 @@ train_loader_over = DataLoader(dataset_over, batch_size = 64, shuffle = True)
 ```
 Overall, after experimenting with various machine learning algorithms, we concluded that Random Forest and XGBoost performed the best for our model evaluation. However, PyTorch was found to be less suitable for handling our imbalanced classifications.
 
-## Section:6 
+## 6. Model Evaluation 
+Once the model is set and trained, it is time to run the model and evaluate the results. We run both oversampled and undersampled data in the different model approaches ('RandomForest', 'XGBooster', and 'PyTorch') and analyze the results. The accuracy of the 'RandomForest' model was not favorable but not terrible either. The undersample and oversample accuracy were 0.54 and 0.55, respectively. 'XGBooster' performed similarly with undersample and oversample accuracy of 0.53 and 0.56, respectively. It was 'PyTorch' that really surprised us. Its undersample score was 0.11 while its oversample accuracy was 0.13. A reason for why 'RandomForest' and 'XGBooster' performed better is due to their ability to better handle categorical and numerical data. 
 
-## Section:7
+## 7. Feature Importance
+From the evaluation, we drew out the most important features of a song. 
+The undersample importance is as follows:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/560be2d6-8479-4600-b75b-15f709bac083)
 
-## Section:8 
+The oversample importance is as follows:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/b953bd33-b7cc-49c4-8843-086b20277e25)
 
-## Section:9 
+In both cases, speechiness, acousticness, danceability, and loudness are the top four most important features. 
+
+
+From the evaluation, we drew out the most important features of a song. 
+The undersample importance is as follows:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/560be2d6-8479-4600-b75b-15f709bac083)
+
+The oversample importance is as follows:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/b953bd33-b7cc-49c4-8843-086b20277e25)
+
+In both cases, speechiness, acousticness, danceability, and loudness are the top four most important features. 
+
+
+## 8. Deeper Analysis About the Analysis 
+We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes. The first seven correlation matrix showed:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/5b80138e-3045-4442-9604-c7769f3a3261)
+
+The last three correlation matrix showed:
+![image](https://github.com/kaylah176/Project_2/assets/151468004/4be4e59f-93cd-430a-a218-643e25d32c69)
+
+It is immediately visible that there is greater correlation among the last three classes than the first seven. 
+
+## 9. Revenue Forecast 
+At this point we have compiled enough data to forecast streams and revenue. We concatenated the 'X_test' and 'y_test', and grouped by genre streams and predicted streams. The historical versus predicted streams are as follows:
+<img width="801" alt="Screenshot 2024-04-08 at 9 18 23 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/295c71ff-5451-48bd-8a8f-4cefa91bd64e">
+
+We know a mid-point for revenue per stream is $0.004, so we multiplied this number by the historical and predcted streams to find revenue. That comparison is as follows:
+<img width="799" alt="Screenshot 2024-04-08 at 9 21 13 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/36c572bf-98ba-4006-92f5-476f8c8d7a90">
+
 
 ## Conclusion
 The last 3 classes has stronger correlation with genre based on factors 
