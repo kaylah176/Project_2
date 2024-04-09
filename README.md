@@ -134,7 +134,7 @@ The last three correlation matrix showed:
 It is immediately visible that there is greater correlation among the last three classes than the first seven. 
 
 ## 9. Revenue Forecast 
-At this point we have compiled enough data to forecast streams and revenue. We concatenated the 'X_test' and 'y_test', and grouped by genre streams and predicted streams. The historical versus predicted streams are as follows:
+At this point we have compiled enough data to forecast streams and revenue. We concatenated the `X_test` and `y_test` and grouped by genre streams and predicted streams. The historical versus predicted streams are as follows:
 
 <img width="801" alt="Screenshot 2024-04-08 at 9 18 23 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/295c71ff-5451-48bd-8a8f-4cefa91bd64e">
 
