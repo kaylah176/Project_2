@@ -58,7 +58,7 @@ clf_under = GridSearchCV(estimator = rf_under, param_grid = param_grid, cv = 5)
 clf_under.fit(X_under_resampled, y_under_resampled)
 ```
 
-*Oversample
+* Oversample
 ```python
 rf_over = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
 clf_over = GridSearchCV(estimator = rf_over, param_grid = param_grid, cv = 5)
