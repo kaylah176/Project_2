@@ -64,7 +64,7 @@ rf_over = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
 clf_over = GridSearchCV(estimator = rf_over, param_grid = param_grid, cv = 5)
 clf_over.fit(X_over_resampled, y_over_resampled)
 ```
-### XG Booster 
+### XGBooster 
 * Undersample
 ```python
  xgb_clf_under.fit(x_train_xgb, y_train_xgb, eval_set = [(x_valid, y_valid)], verbose = True)
