@@ -27,16 +27,21 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 * xgboost for energizing machine learning model performance and computational speed
 * Pytorch for machine learning
   
-## 2. Set Up Global Parameters
-In this initial phase, we established the foundation for our analysis by defining global parameters. These parameters include the date range for our data, the list of genres to analyze alongside its ranking, and any financial metrics of interest (e.g. number of streams, price of each stream). These steps are crucial as it ensures that all subsequent analyses operate under a consistent set of assumptions and data scope.
-Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 features).  
+## Data Exploration
+In this initial phase, we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 features).
+
 ```python
-spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
+spotify = df.drop(columns = ['Unnamed: 0', 'uri', 'artist_names', 'artist_img', 'artist_individual', 
+                             'album_cover', 'artist_id', 'track_name', 'source', 'pivot', 'release_date', 'collab'])
+spotify.dropna(inplace = True)
 ```
-## 3. Data Exploration
-In our data exploration phase, we concentrated on our four key features and streams to investigate potential correlations within our dataset. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted into picking the top ten of our four key features data set: `country`, `region`, `artist genre`, and `language`. We did this because in the next section it will optimize the final data output.  
 
+In our data exploration phase, we did a numerical and categorical feature analysis. In the numerical feature analysis the heatmap revealed minimal to no correlation between features and streams. In categorial features we analyzed country region artist genre and language. After this we focused on the top 10 countries and top 10 genres because our data set was too large. 
 
+```python
+spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_country)) &
+                                    (spotify_filter['artist_genre'].isin(top10_genre))]
+```
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
 
 
