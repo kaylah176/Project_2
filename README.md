@@ -28,15 +28,14 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 * Pytorch for machine learning
   
 ## Data Exploration
-In this initial phase, we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally.
+In the filtering phase, we identified certain categorical features containing irrelevant data that did not align with our parameters. To address this issue, we filtered out data entries that did not specify a certain genre or those designated as global. 
 
 ```python
 spotify = df.drop(columns = ['Unnamed: 0', 'uri', 'artist_names', 'artist_img', 'artist_individual', 
                              'album_cover', 'artist_id', 'track_name', 'source', 'pivot', 'release_date', 'collab'])
 spotify.dropna(inplace = True)
 ```
-
-In our data exploration phase, we did a numerical and categorical feature analysis. In the numerical feature analysis the heatmap revealed minimal to no correlation between features and streams. In categorial features we analyzed country region artist genre and language. After this we focused on the top 10 countries and top 10 genres because our data set was too large. 
+During our data exploration phase, we conducted analyses on both numerical and categorical features. The heatmap for numerical features indicated minimal to no correlation between features and streams. For categorical features, we examined `country`, `region`, `artist genre`, and `language`. Subsequently, we narrowed our focus to the top 10 countries and top 10 genres due to the large size of our dataset. 
 
 ```python
 spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_country)) &
