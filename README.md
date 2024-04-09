@@ -22,7 +22,6 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 ## 1. Install Packages
 * pandas for data manipulation;
 * numpy for numerical operations;
-* yfinance for fetching assets prices;
 * matplotlib , seaborn and hvplot for visualization. 
 * sklearn.preprocessing for statistical modeling including classification, regression, clustering and dimensionality reduction
 * xgboost for energizing machine learning model performance and computational speed
@@ -30,7 +29,7 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
   
 ## 2. Set Up Global Parameters
 In this initial phase, we established the foundation for our analysis by defining global parameters. These parameters include the date range for our data, the list of genres to analyze alongside its ranking, and any financial metrics of interest (e.g. number of streams, price of each stream). These steps are crucial as it ensures that all subsequent analyses operate under a consistent set of assumptions and data scope.
-Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 categories).  
+Through our filtering we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 features).  
 ```python
 spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
 ```
