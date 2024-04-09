@@ -28,7 +28,7 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 * Pytorch for machine learning
   
 ## Data Exploration
-In this initial phase, we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally (not within our top 10 features).
+In this initial phase, we found that some of our categorical features had some unnecessary data that did not fit under our parameters. To fix this we filtered the data that did not have a name for the type of genre or data that was taken globally.
 
 ```python
 spotify = df.drop(columns = ['Unnamed: 0', 'uri', 'artist_names', 'artist_img', 'artist_individual', 
