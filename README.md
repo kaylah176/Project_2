@@ -92,7 +92,7 @@ y_tensor_over = torch.tensor(y_over_resampled, dtype = torch.long)
 dataset_over = TensorDataset(X_tensor_over, y_tensor_over) 
 train_loader_over = DataLoader(dataset_over, batch_size = 64, shuffle = True)
 ```
-Overall, even with these machine learning alogrithims we determined that Random and XGBooster ended up being the best machine learning algorithim fruther explain in our model evaluation. Pytorch in this case was not the best fit for our categorical features. 
+Overall, after experimenting with various machine learning algorithms, we concluded that Random Forest and XGBoost performed the best for our model evaluation. However, PyTorch was found to be less suitable for handling our imbalanced classifications.
 
 ## Section:6 
 
