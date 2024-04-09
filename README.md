@@ -35,7 +35,7 @@ Through our filtering we found that some of our categorical features had some un
 spotify_filter = spotify.loc[(spotify['artist_genre'] != '0') & (spotify['country'] != 'Global') & (spotify['language'] != 'Global')]
 ```
 ## 3. Data Exploration
-In our data exploration phase, we concentrated on our four key features and streams to investigate potential correlations within our dataset. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted into picking the top ten of our four key features data set: `country`, `region`, `artist genre`, and `language`. We did this because in the next section it will optimize the data set that we narrowed down.  
+In our data exploration phase, we concentrated on our four key features and streams to investigate potential correlations within our dataset. However, through our analysis the heatmap revealed minimal to no correlation between features and streams. Following this realization, we opted into picking the top ten of our four key features data set: `country`, `region`, `artist genre`, and `language`. We did this because in the next section it will optimize the final data output.  
 
 
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
