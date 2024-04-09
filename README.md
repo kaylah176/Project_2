@@ -47,10 +47,11 @@ spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_countr
 ## Section:4  
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
 
-## Section:5 
-In this section we used Random Forest in order to find an algorithm within our new data set in order to find a connection between the number of steams and features. Hence, why we chose this machine learning because it give us accurate and precise results. However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. We think the score is not so high 0.55 so we tried to ee if a newr model will be better however the new model does not make it better.  
+## Model Training  
+In this section we used Random Forest for undersampling and oversampling. For undersampling we found that this machine learning will help with class weighting and any imbalanced classification. For oversampling we felt that a basic sampling method used to increase the number of the minority class to create a balance between both classes. Hence, why we chose this machine learning because it give us accurate and precise results. 
 
-Ask more about the code in this section. -Kim
+However to make our claim stronger we added XGBooster to our code for a gradient boosting algorithm that can be used for classification and making predictions as well. Even by doin ghtis we found that are score of  0.55 so we tried to ee if a newr model will be better however the new model does not make it better.  
+
 
 ## Section:6 
 
