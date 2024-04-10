@@ -43,7 +43,7 @@ spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_countr
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
 
 
-## Feature Preprocessing  
+## Ready for Test & Train Data  
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minority class we used Clustering as a way to identify and separate groups onto a smaller dataset with two or more variable quantities.
 ```python
 cc = ClusterCentroids(random_state = 1)
