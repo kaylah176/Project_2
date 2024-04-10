@@ -96,6 +96,12 @@ Overall, after experimenting with various machine learning algorithms, we conclu
 ## 6. Model Evaluation 
 Once the model is set and trained, it is time to run the model and evaluate the results. We run both oversampled and undersampled data in the different model approaches (`RandomForest`, `XGBooster`, and `PyTorch`) and analyze the results. The accuracy of the `RandomForest` model was not favorable but not terrible either. The undersample and oversample accuracy were 0.54 and 0.55, respectively. `XGBooster` performed similarly with undersample and oversample accuracy of 0.53 and 0.56, respectively. It was `PyTorch` that really surprised us. Its undersample score was 0.11 while its oversample accuracy was 0.13. A reason for why `RandomForest` and `XGBooster` performed better is due to their ability to better handle categorical and numerical data. 
 
+```python
+pred_y_xgb_over = xgb_clf_over.predict(X_test_scaled)
+```
+<img width="396" alt="Screenshot 2024-04-09 at 7 58 48 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/7f48db54-325e-4c19-8662-12dda745ffc7">
+
+
 ## 7. Feature Importance
 From the evaluation, we drew out the most important features of a song. 
 The undersample importance is as follows:
