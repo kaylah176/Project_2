@@ -1,5 +1,4 @@
-# Money Makers
-## Understanding factors that influence stream revenue
+# Money Makers: ## Understanding factors that influence stream revenue
 
 ## Background
 The music industry is a completely new space with the integration of technology. Music previously generated money by selling records and radio airplay. The emergence of online streaming platforms has changed the game for good. It is no longer necessary to buy an entire record to enjoy some songs on an album. Consumers can pick and choose individual songs off any album now. But if that’s the case, how do songs generate money, and what songs seem to be cash cows?
