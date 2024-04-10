@@ -1,5 +1,4 @@
 # Project_2
-Objective: Determining contributing factors to Spotify revenue streams
 
 ## Background
 The music industry is a completely new space with the integration of technology. Music previously generated money by selling records and radio airplay. The emergence of online streaming platforms has changed the game for good. It is no longer necessary to buy an entire record to enjoy some songs on an album. Consumers can pick and choose individual songs off any album now. But if that’s the case, how do songs generate money, and what songs seem to be cash cows?
@@ -109,19 +108,6 @@ The oversample importance is as follows:
 
 In both cases, speechiness, acousticness, danceability, and loudness are the top four most important features. 
 
-
-From the evaluation, we drew out the most important features of a song. 
-The undersample importance is as follows:
-
-![image](https://github.com/kaylah176/Project_2/assets/151468004/560be2d6-8479-4600-b75b-15f709bac083)
-
-The oversample importance is as follows:
-
-![image](https://github.com/kaylah176/Project_2/assets/151468004/b953bd33-b7cc-49c4-8843-086b20277e25)
-
-In both cases, speechiness, acousticness, danceability, and loudness are the top four most important features. 
-
-
 ## 8. Deeper Analysis About the Analysis 
 We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes, in order to find out why the predictions accuracy are so different between the first seven and last three classes.
 
@@ -151,4 +137,4 @@ We know a mid-point for revenue per stream is $0.004, so we multiplied this numb
 
 ## Conclusion
 The last 3 classes has stronger correlation with genre based on factors 
-
+mention https://www.kaggle.com/datasets/yelexa/spotify200
