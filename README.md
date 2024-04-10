@@ -123,7 +123,9 @@ In both cases, speechiness, acousticness, danceability, and loudness are the top
 
 
 ## 8. Deeper Analysis About the Analysis 
-We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes. The first seven correlation matrix showed:
+We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes, in order to find out why the predictions accuracy are so different between the first seven and last three classes.
+
+The first seven correlation matrix showed:
 
 ![image](https://github.com/kaylah176/Project_2/assets/151468004/5b80138e-3045-4442-9604-c7769f3a3261)
 
