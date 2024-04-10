@@ -43,8 +43,19 @@ spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_countr
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
 
 
-## Section:4  
-First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minorty class we used Clustering as a way to identify and seperate groups onto a smaller dataset with two or more variable quantities.
+## Feature Preprocessing  
+First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minority class we used Clustering as a way to identify and separate groups onto a smaller dataset with two or more variable quantities.
+```python
+cc = ClusterCentroids(random_state = 1)
+```
+```python
+X_under_resampled, y_under_resampled = cc.fit_resample(X_train_scaled, y_train)
+```
+```python
+rus = RandomOverSampler(random_state = 42)
+```
+```python
+X_over_resampled, y_over_resampled = rus.fit_resample(X_train_scaled, y_train)
 
 ## **4. Model Training**
 In this section we used three machine learning algorithms; `Random Forest`, `XGBooster`, and `PyTorch` for undersampling and oversampling. We decided on these alogrithms to train the resampled dataset from section 4 to help with any imbalanced classifications. 
