@@ -19,12 +19,12 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 
 ## How to Run the Project 
 ## 1. Install Packages
-* pandas for data manipulation;
-* numpy for numerical operations;
-* matplotlib , seaborn and hvplot for visualization. 
-* sklearn.preprocessing for statistical modeling including classification, regression, clustering and dimensionality reduction
-* xgboost for energizing machine learning model performance and computational speed
-* Pytorch for machine learning
+* `pandas` for data manipulation;
+* `numpy` for numerical operations;
+* `matplotlib` , `seaborn` and `hvplot` for visualization. 
+* `sklearn.preprocessing` for statistical modeling including classification, regression, clustering and dimensionality reduction
+* `xgboost` for energizing machine learning model performance and computational speed
+* `Pytorch` for machine learning
   
 ## Data Exploration
 In the filtering phase, we identified certain categorical features containing irrelevant data that did not align with our parameters. To address this issue, we filtered out data entries that did not specify a certain genre or those designated as global. 
