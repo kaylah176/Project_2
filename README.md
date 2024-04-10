@@ -106,7 +106,7 @@ The oversample importance is as follows:
 
 ![image](https://github.com/kaylah176/Project_2/assets/151468004/b953bd33-b7cc-49c4-8843-086b20277e25)
 
-In both cases, speechiness, acousticness, danceability, and loudness are the top four most important features. 
+In both cases, `speechiness`, `acousticness`, `danceability`, and `loudness` are the top four most important features. 
 
 ## 8. Deeper Analysis About the Analysis 
 We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes, in order to find out why the predictions accuracy are so different between the first seven and last three classes.
