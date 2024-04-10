@@ -56,6 +56,7 @@ rus = RandomOverSampler(random_state = 42)
 ```
 ```python
 X_over_resampled, y_over_resampled = rus.fit_resample(X_train_scaled, y_train)
+```
 
 ## **4. Model Training**
 In this section we used three machine learning algorithms; `Random Forest`, `XGBooster`, and `PyTorch` for undersampling and oversampling. We decided on these alogrithms to train the resampled dataset from section 4 to help with any imbalanced classifications. 
