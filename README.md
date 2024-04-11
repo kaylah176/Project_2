@@ -10,7 +10,7 @@ Our project explores the different genres of music and what the revenue implicat
 
 ## Objective 
 * **Data Acquisition:** Utilize Spotify top 200 songs over the past two years data
-* **Data Exploration:** Leverage libraries like pandas and numpy to manipulate data
+* **Data Exploration:** Leverage libraries like `pandas` and `numpy` to manipulate data
 * **Data Modeling:** Train and test split the data to scale, model, and predict it
 * **Visualization/Performance Analysis:** Use `matplotlib` and `hvplot` to visualize and better analyze the data
 
