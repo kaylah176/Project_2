@@ -1,3 +1,7 @@
+
+![download](https://github.com/kaylah176/Project_2/assets/152752672/66c1f090-5e5c-4b5d-ae5c-97b353e538f5)
+
+
 # Money Makers: Understanding the Factors that Influence Stream Revenue
 
 ## Background
