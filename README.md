@@ -1,4 +1,4 @@
-# Money Makers: Understanding factors that influence stream revenue
+# Money Makers: Understanding the Factors that Influence Stream Revenue
 
 ## Background
 The music industry is a completely new space with the integration of technology. Music previously generated money by selling records and radio airplay. The emergence of online streaming platforms has changed the game for good. It is no longer necessary to buy an entire record to enjoy some songs on an album. Consumers can pick and choose individual songs off any album now. But if that’s the case, how do songs generate money, and what songs seem to be cash cows?
@@ -154,5 +154,6 @@ We know a mid-point for revenue per stream is $0.004, so we multiplied this numb
 
 
 ## Conclusion
-The last 3 classes has stronger correlation with genre based on factors 
-mention https://www.kaggle.com/datasets/yelexa/spotify200
+In conclusion, Random Forest and XGBoost had a similar performance in both under sampled and over sampled data. We discovered some important features regardless of class distribution that were accurately predicted. 
+Hence, the last 3 classes had a stronger correlation with genre based on factors 
+mention on https://www.kaggle.com/datasets/yelexa/spotify200.
