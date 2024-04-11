@@ -12,7 +12,7 @@ Our project explores the different genres of music and what the revenue implicat
 * **Data Acquisition:** Utilize Spotify top 200 songs over the past two years data
 * **Data Exploration:** Leverage libraries like pandas and numpy to manipulate data
 * **Data Modeling:** Train and test split the data to scale, model, and predict it
-* **Visualization/Performance Analysis:** Use matplotlib and hvplot to visualize and better analyze the data
+* **Visualization/Performance Analysis:** Use `matplotlib` and `hvplot` to visualize and better analyze the data
 
 ## Hypothesis
 We can take the top 200 songs from the last two years on Spotify to train a machine learning model that will produce a forecast of the most streamed genres. This information will be used to predict the amount of revenue certain songs will generate and how much certain artists will earn. This premise places importance on data analytics as one foundation for music production. 
