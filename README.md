@@ -9,10 +9,10 @@ Our project explores the different genres of music and what the revenue implicat
 'Spotify.csv’
 
 ## Objective 
-* Data Acquisition: Utilize Spotify top 200 songs over the past two years data
-* Data Exploration: Leverage libraries like pandas and numpy to manipulate data
-* Data Modeling: Train and test split the data to scale, model, and predict it
-* Visualization/Performance Analysis: Use matplotlib and hvplot to visualize and better analyze the data
+* **Data Acquisition:** Utilize Spotify top 200 songs over the past two years data
+* **Data Exploration:** Leverage libraries like pandas and numpy to manipulate data
+* **Data Modeling:** Train and test split the data to scale, model, and predict it
+* **Visualization/Performance Analysis:** Use matplotlib and hvplot to visualize and better analyze the data
 
 ## Hypothesis
 We can take the top 200 songs from the last two years on Spotify to train a machine learning model that will produce a forecast of the most streamed genres. This information will be used to predict the amount of revenue certain songs will generate and how much certain artists will earn. This premise places importance on data analytics as one foundation for music production. 
@@ -26,7 +26,7 @@ We can take the top 200 songs from the last two years on Spotify to train a mach
 * `xgboost` for energizing machine learning model performance and computational speed
 * `Pytorch` for machine learning
   
-## Data Exploration
+## 2. Data Exploration
 In the filtering phase, we identified certain categorical features containing irrelevant data that did not align with our parameters. To address this issue, we filtered out data entries that did not specify a certain genre or those designated as global. 
 
 ```python
@@ -43,7 +43,7 @@ spotify_filter = spotify_filter.loc[(spotify_filter['country'].isin(top10_countr
 <img width="640" alt="Screenshot 2024-04-08 at 6 49 28 PM" src="https://github.com/kaylah176/Project_2/assets/152752672/1f00204f-29a6-4c9d-a660-d99bd5869ef8">
 
 
-## Ready for Test & Train Data  
+## 3. Ready for Test & Train Data  
 First off we changed the categorical features to numbers by using dummies for our final data output. When Undersampling the minority class we used Clustering as a way to identify and separate groups onto a smaller dataset with two or more variable quantities.
 ```python
 cc = ClusterCentroids(random_state = 1)
@@ -58,10 +58,10 @@ rus = RandomOverSampler(random_state = 42)
 X_over_resampled, y_over_resampled = rus.fit_resample(X_train_scaled, y_train)
 ```
 
-## **4. Model Training**
+## 4. Model Training
 In this section we used three machine learning algorithms; `Random Forest`, `XGBooster`, and `PyTorch` for undersampling and oversampling. We decided on these alogrithms to train the resampled dataset from section 4 to help with any imbalanced classifications. 
 
-### **4.1 Random Forest** 
+### 4.1 Random Forest 
 * Undersample
 ```python
 rf_under = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
@@ -75,7 +75,7 @@ rf_over = RandomForestClassifier(random_state = 2, max_features = 'sqrt')
 clf_over = GridSearchCV(estimator = rf_over, param_grid = param_grid, cv = 5)
 clf_over.fit(X_over_resampled, y_over_resampled)
 ```
-### ** 4.2 XGBooster **
+### 4.2 XGBooster
 * Undersample
 ```python
  xgb_clf_under.fit(x_train_xgb, y_train_xgb, eval_set = [(x_valid, y_valid)], verbose = True)
@@ -84,7 +84,7 @@ clf_over.fit(X_over_resampled, y_over_resampled)
 ```python
   xgb_clf_over.fit(x_train_xgb, y_train_xgb, eval_set = [(x_valid, y_valid)], verbose = True)
 ```
-### ** 4.3 PyTorch **
+### 4.3 PyTorch
 * Undersample
 ```python
 X_tensor_under = torch.tensor(X_under_resampled, dtype = torch.float32)  
@@ -105,7 +105,7 @@ train_loader_over = DataLoader(dataset_over, batch_size = 64, shuffle = True)
 ```
 Overall, after experimenting with various machine learning algorithms, we concluded that Random Forest and XGBoost performed the best for our model evaluation. However, PyTorch was found to be less suitable for handling our imbalanced classifications.
 
-## 6. Model Evaluation 
+## 5. Model Evaluation 
 Once the model is set and trained, it is time to run the model and evaluate the results. We run both oversampled and undersampled data in the different model approaches (`RandomForest`, `XGBooster`, and `PyTorch`) and analyze the results. The accuracy of the `RandomForest` model was not favorable but not terrible either. The undersample and oversample accuracy were 0.54 and 0.55, respectively. `XGBooster` performed similarly with undersample and oversample accuracy of 0.53 and 0.56, respectively. It was `PyTorch` that really surprised us. Its undersample score was 0.11 while its oversample accuracy was 0.13. A reason for why `RandomForest` and `XGBooster` performed better is due to their ability to better handle categorical and numerical data. 
 
 ```python
@@ -114,7 +114,7 @@ pred_y_xgb_over = xgb_clf_over.predict(X_test_scaled)
 <img width="396" alt="Screenshot 2024-04-09 at 7 58 48 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/7f48db54-325e-4c19-8662-12dda745ffc7">
 
 
-## 7. Feature Importance
+## 6. Feature Importance
 From the evaluation, we drew out the most important features of a song. 
 The undersample importance is as follows:
 
@@ -126,7 +126,7 @@ The oversample importance is as follows:
 
 In both cases, `speechiness`, `acousticness`, `danceability`, and `loudness` are the top four most important features. 
 
-## 8. Deeper Analysis About the Analysis 
+## 7. Deeper Analysis About the Analysis 
 We saw what the correlation was in a previous section. In this section we ran correlation analyses on the first seven and last three classes, in order to find out why the predictions accuracy are so different between the first seven and last three classes.
 
 The first seven correlation matrix showed:
@@ -139,12 +139,10 @@ The last three correlation matrix showed:
 
 It is immediately visible that there is greater correlation among the last three classes than the first seven. 
 
-## 9. Revenue Forecast 
+## 8. Revenue Forecast 
 At this point we have compiled enough data to forecast streams and revenue. 
 
 We use the test dataset to make a comparison between historical average streams and predited average streams per genre.
-
-We concatenated the `X_test` and `y_test` and grouped by genre streams and predicted streams. The historical versus predicted streams are as follows:
 
 <img width="801" alt="Screenshot 2024-04-08 at 9 18 23 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/295c71ff-5451-48bd-8a8f-4cefa91bd64e">
 
@@ -152,8 +150,9 @@ We know a mid-point for revenue per stream is $0.004, so we multiplied this numb
 
 <img width="799" alt="Screenshot 2024-04-08 at 9 21 13 PM" src="https://github.com/kaylah176/Project_2/assets/151468004/36c572bf-98ba-4006-92f5-476f8c8d7a90">
 
-
 ## Conclusion
-In conclusion, Random Forest and XGBoost had a similar performance in both under sampled and over sampled data. We discovered some important features regardless of class distribution that were accurately predicted. 
-Hence, the last 3 classes had a stronger correlation with genre based on factors 
-mention on https://www.kaggle.com/datasets/yelexa/spotify200.
+* Random Forest and XGBoost had a similar performance in both under sampled and over sampled data.
+* We discovered some important features regardless of class distribution that were accurately predicted. 
+
+## Credits
+Thanks to this data source author: https://www.kaggle.com/datasets/yelexa/spotify200.
